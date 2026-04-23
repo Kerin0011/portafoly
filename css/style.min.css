@@ -1,4 +1,3 @@
-/* Color variables for easy maintenance */
 :root {
     --primary-color: #0f172a;
     --secondary-color: #3b82f6;
@@ -6,20 +5,18 @@
     --bg-light: #f8fafc;
     --text-dark: #1e293b;
     --white: #ffffff;
-    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)
 }
 
-/* General Styles */
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     line-height: 1.5;
     color: var(--text-dark);
     margin: 0;
     padding: 0;
-    background-color: var(--bg-light);
+    background-color: var(--bg-light)
 }
 
-/* Header and Navigation */
 header {
     position: sticky;
     top: 0;
@@ -31,7 +28,7 @@ header {
     background-color: var(--primary-color);
     color: var(--white);
     padding: 1rem 5%;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow)
 }
 
 nav ul {
@@ -40,38 +37,35 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 1.875rem;
-    /* 30px */
+    gap: 1.875rem
 }
 
 nav a {
     color: var(--white);
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    padding-bottom: 0.3125rem;
+    transition: color .3s ease, border-bottom .3s ease;
+    padding-bottom: 0.3125rem
 }
 
 nav a:hover {
     color: var(--secondary-color);
-    border-bottom: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color)
 }
 
-/* Sections */
 main,
 section {
     padding: 3.125rem 1.25rem;
     max-width: 68.75rem;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
-/* Hero Section / About Me */
 #sobre-mi {
     background: var(--white);
     border-radius: 1.5rem;
     margin-top: 2.5rem;
     box-shadow: var(--shadow);
-    padding: 3.75rem 2.5rem;
+    padding: 3.75rem 2.5rem
 }
 
 .hero-content {
@@ -79,59 +73,52 @@ section {
     align-items: center;
     justify-content: space-between;
     gap: 2.5rem;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse
 }
 
 .hero-text {
     flex: 1;
-    min-width: 300px;
+    min-width: 300px
 }
 
 .hero-text h1 {
     font-size: 2.25rem;
-    margin-bottom: 0.625rem;
+    margin-bottom: 0.625rem
 }
 
 .hero-text span {
-    color: var(--secondary-color);
+    color: var(--secondary-color)
 }
 
 .profile-pic {
     width: 15.625rem;
     height: 15.625rem;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
     object-fit: cover;
-    border: 0.5rem solid var(--bg-light);
+    border: .5rem solid var(--bg-light);
     box-shadow: var(--shadow);
-    transition: border-radius 0.5s ease;
+    transition: border-radius .5s ease
 }
 
 .profile-pic:hover {
-    border-radius: 50%;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-    margin: 1.5rem 0;
+    border-radius: 50%
 }
 
 .hidden {
-    display: none;
+    display: none
 }
 
 #proyectos {
-    text-align: center;
+    text-align: center
 }
 
-/* Projects and Lists */
 #proyectos ul {
     list-style: none;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
     gap: 1.5625rem;
-    justify-content: center;
+    justify-content: center
 }
 
 #proyectos li {
@@ -145,25 +132,25 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.3s ease;
+    transition: transform .3s ease
 }
 
 #proyectos li:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px)
 }
 
 #proyectos li img {
     width: 100%;
     height: 11.25rem;
     object-fit: cover;
-    border-radius: 0.75rem;
-    margin-bottom: 0.9375rem;
+    border-radius: .75rem;
+    margin-bottom: 0.9375rem
 }
 
 .project-links {
     display: flex;
     justify-content: center;
-    margin-top: 0.9375rem;
+    margin-top: 0.9375rem
 }
 
 #proyectos li a {
@@ -171,24 +158,19 @@ section {
     color: var(--white);
     background-color: var(--primary-color);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
     padding: 0.625rem 1.25rem;
     border-radius: 0.5rem;
-    transition: all 0.3s ease;
-}
-
-/* Style for the "View Code" button */
-#proyectos li a.secondary {
-    background-color: var(--primary-color);
+    transition: all .3s ease
 }
 
 #proyectos li a:hover {
     background-color: var(--secondary-color);
-    transform: scale(1.05);
+    transform: scale(1.05)
 }
 
 #contacto {
-    text-align: center;
+    text-align: center
 }
 
 .social-links {
@@ -196,7 +178,7 @@ section {
     justify-content: center;
     gap: 1.25rem;
     flex-wrap: wrap;
-    margin-top: 1.875rem;
+    margin-top: 1.875rem
 }
 
 .social-btn {
@@ -209,27 +191,26 @@ section {
     padding: 0.75rem 1.5rem;
     border-radius: 0.75rem;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
     box-shadow: var(--shadow);
     border: none;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .social-btn i {
-    font-size: 1.1rem;
+    font-size: 1.1rem
 }
 
 .social-btn:hover {
     background-color: var(--secondary-color);
-    transform: translateY(-3px);
+    transform: translateY(-3px)
 }
 
-/* Pet Gallery (mascotas.html) */
 #galeria-mascotas {
     display: flex;
     flex-wrap: wrap;
     gap: 1.875rem;
-    justify-content: center;
+    justify-content: center
 }
 
 #galeria-mascotas article {
@@ -238,13 +219,13 @@ section {
     border-radius: 0.9375rem;
     text-align: center;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
+    transition: transform .3s ease;
     flex: 1 1 18.75rem;
-    max-width: 350px;
+    max-width: 350px
 }
 
 #galeria-mascotas article:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px)
 }
 
 #galeria-mascotas img {
@@ -255,59 +236,54 @@ section {
     object-fit: contain;
     border-radius: 0.625rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 0.9375rem;
+    margin-bottom: 0.9375rem
 }
 
-/* Media Queries */
-
-/* Tablet: Pantallas medianas */
-@media (max-width: 992px) {
+@media (max-width:992px) {
     #proyectos ul {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr)
     }
 
     #galeria-mascotas {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr)
     }
 
     #galeria-mascotas article {
-        max-width: none;
+        max-width: none
     }
 }
 
-/* Mobile: Pantallas pequeñas */
-@media (max-width: 600px) {
+@media (max-width:600px) {
     header {
         flex-direction: column;
-        text-align: center;
+        text-align: center
     }
 
     nav ul {
         flex-direction: column;
         gap: 15px;
-        margin-top: 15px;
+        margin-top: 15px
     }
 
     #proyectos ul {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr
     }
 
     #galeria-mascotas {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr)
     }
 
     #galeria-mascotas article {
-        max-width: none;
+        max-width: none
     }
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 40px;
     background-color: var(--primary-color);
-    color: white;
-    margin-top: 50px;
+    color: #fff;
+    margin-top: 50px
 }
