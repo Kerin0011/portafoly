@@ -31,4 +31,28 @@ document.addEventListener('DOMContentLoaded', () => {
             this.setAttribute('aria-expanded', !isNowHidden);
         });
     }
+
+    // Lógica del Menú Hamburguesa
+    const mobileMenuBtn = document.getElementById('mobile-menu');
+    const navUl = document.querySelector('nav ul');
+
+    if (mobileMenuBtn && navUl) {
+        mobileMenuBtn.addEventListener('click', () => {
+            navUl.classList.toggle('active');
+            // Cambiar icono entre barras y X
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Cerrar menú al hacer clic en cualquier enlace
+        navUl.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                navUl.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            }
+        });
+    }
 });
