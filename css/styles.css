@@ -1,0 +1,493 @@
+/* Color variables for easy maintenance */
+:root {
+    --primary-color: #0f172a;
+    --secondary-color: #3b82f6;
+    --accent-color: #8b5cf6;
+    --bg-light: #f8fafc;
+    --text-dark: #1e293b;
+    --white: #ffffff;
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+/* General Styles */
+/* AÑADIDO: El box-sizing es vital para que Firefox no estire el menú más de la cuenta */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.5;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+}
+
+/* Header and Navigation */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--white);
+    color: var(--text-dark);
+    padding: 1rem 5%;
+    box-shadow: var(--shadow);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-container .logo {
+    height: 120px; /* Tamaño ajustable para el logo */
+    width: auto;
+    object-fit: contain;
+    max-height: 150px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.875rem;
+}
+
+nav a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 0.3125rem;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Sections */
+main,
+section {
+    padding: 3.125rem 1.25rem;
+    max-width: 68.75rem;
+    margin: 0 auto;
+}
+
+/* Hero Section / About Me */
+#sobre-mi {
+    background: var(--white);
+    border-radius: 1.5rem;
+    margin-top: 2.5rem;
+    box-shadow: var(--shadow);
+    padding: 3.75rem 2.5rem;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    flex-wrap: wrap-reverse;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-text h1 {
+    font-size: 2.25rem;
+    margin-bottom: 0.625rem;
+}
+
+.hero-text span {
+    color: var(--secondary-color);
+}
+
+.profile-pic {
+    width: 15.625rem;
+    height: 15.625rem;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    object-fit: cover;
+    border: 0.5rem solid var(--bg-light);
+    box-shadow: var(--shadow);
+    transition: border-radius 0.5s ease;
+}
+
+.profile-pic:hover {
+    border-radius: 50%;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+/* ESTO ES LO QUE TE FALTABA: No borrar el sistema de visibilidad */
+.hidden {
+    display: none !important;
+}
+
+#proyectos {
+    text-align: center;
+}
+
+/* Projects and Lists */
+#proyectos ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
+    gap: 1.5625rem;
+    justify-content: center;
+}
+
+#proyectos li {
+    background: var(--white);
+    margin: 0;
+    padding: 1.25rem;
+    border-left: none;
+    border-bottom: 4px solid var(--secondary-color);
+    box-shadow: var(--shadow);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+#proyectos li:hover {
+    transform: translateY(-5px);
+}
+
+#proyectos li img {
+    width: 100%;
+    height: 11.25rem;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    margin-bottom: 0.9375rem;
+}
+
+.project-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.9375rem;
+}
+
+#proyectos li a {
+    display: inline-block;
+    color: var(--white);
+    background-color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+#proyectos li a.secondary {
+    background-color: var(--primary-color);
+}
+
+#proyectos li a:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+#contacto {
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    margin-top: 1.875rem;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+    border: none;
+    cursor: pointer;
+}
+
+.social-btn i {
+    font-size: 1.1rem;
+}
+
+.social-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* Contact Form Styles */
+.contact-box {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    max-width: 600px;
+    margin: 2.5rem auto 0;
+    text-align: left;
+}
+
+.contact-box h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.5rem;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: var(--bg-light);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.submit-btn {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* Pet Gallery (mascotas.html) */
+#galeria-mascotas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.875rem;
+    justify-content: center;
+}
+
+#galeria-mascotas article {
+    background: var(--bg-light);
+    padding: 0.625rem;
+    border-radius: 0.9375rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+    flex: 1 1 18.75rem;
+    max-width: 350px;
+}
+
+#galeria-mascotas article:hover {
+    transform: translateY(-10px);
+}
+
+#galeria-mascotas img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    border-radius: 0.625rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.9375rem;
+}
+
+/* Media Queries */
+
+/* Pantallas medianas (Tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #proyectos ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #galeria-mascotas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #galeria-mascotas article {
+        max-width: none;
+    }
+}
+
+/* Pantallas grandes (Escritorio) */
+@media (min-width: 1025px) {
+    #proyectos ul {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    #galeria-mascotas {
+        display: flex; /* Mantenemos el flex wrap original o usamos grid */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 850px) and (min-width: 601px) {
+    #proyectos ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Mobile: EL AJUSTE ESTÁ AQUÍ */
+@media (max-width: 600px) {
+    header {
+        justify-content: space-between;
+        padding: 0.8rem 1rem;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 1.1rem;
+        margin: 0;
+    }
+
+    .logo-container .logo {
+        height: 80px; /* Logo un poco más pequeño en móviles */
+    }
+
+    .menu-toggle {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        background: transparent;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav {
+        position: static; /* Firefox se comporta mejor así con absolute children */
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column; /* PARA QUE EL TAMAÑO SEA CONTROLADO */
+        position: absolute;
+        top: 100%;
+        right: 0; /* ANCLADO A LA DERECHA */
+        width: 250px; /* TAMAÑO ARREGLADO */
+        background-color: var(--white);
+        padding: 1.5rem 1rem;
+        gap: 0.8rem;
+        box-shadow: var(--shadow);
+        z-index: 2000; /* POR ENCIMA DE TODO EN FIREFOX */
+        border-radius: 0 0 0 15px;
+    }
+
+    nav ul.active {
+        display: flex !important;
+    }
+
+    nav ul li {
+        flex: none; /* Quitamos el 40% que los hacía gigantes */
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 1.1rem;
+        padding: 1rem 0.5rem;
+        display: block;
+        background-color: var(--bg-light);
+        color: var(--text-dark);
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    #proyectos ul {
+        grid-template-columns: 1fr;
+    }
+
+    #galeria-mascotas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #galeria-mascotas article {
+        max-width: none;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 50px;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - Kerin Barranco Martinez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Espacio para agregar un favicon -->
+    <link rel="icon" href="logos/favicon.webp" type="image/webp" sizes="32x32">
+    <link rel="apple-touch-icon" href="logos/favicon.webp" sizes="180x180">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <!-- Espacio para agregar un logo en lugar de solo texto -->
+            <img src="logos/logo.webp" alt="Logo" class="logo">
+        </div>
+        <nav>
+            <button id="mobile-menu" class="menu-toggle" aria-label="Open Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul>
+                <li><a href="#sobre-mi">About Me</a></li>
+                <li><a href="#proyectos">Projects</a></li>
+                <li><a href="#contacto">Contact</a></li>
+                <li><a href="mascotas.html">My Pets</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="sobre-mi">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi, I'm <span>Kerin Barranco</span></h1>
+                    <p id="main-description">I am a web development enthusiast specialized in intuitive interfaces.</p>
+                    
+                    <div class="hero-buttons">
+                        <button id="btn-change-text" class="social-btn"><i class="fas fa-sync-alt"></i> Change Description</button>
+                        <button id="btn-toggle-info" class="social-btn" aria-expanded="false"><i class="fas fa-plus"></i> Show more info</button>
+                    </div>
+
+                    <div id="extra-info" class="hidden">
+                        <p>I focus on writing clean code and innovative solutions. With experience in modern frameworks,
+                            I love learning new technologies every day and solving complex logic problems to create
+                            high-quality web experiences!</p>
+                    </div>
+                </div>
+                <img src="img/perfil.webp" alt="Kerin Barranco Profile Picture" class="profile-pic">
+            </div>
+        </section>
+
+        <section id="proyectos">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <img src="img/prueba-desempeno.webp" alt="Task Manager Thumbnail">
+                    <h3>Task Manager</h3>
+                    <p>A task manager is a tool that helps users organize, track, and prioritize their tasks. It allows
+                        you to create to-do lists, set deadlines, and manage your workflow efficiently to stay
+                        productive.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Kerin0011/Task-Manager" target="_blank">View Code</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/inventario.webp" alt="Inventory System Thumbnail">
+                    <h3>Inventory</h3>
+                    <p>An inventory system is a tool that helps businesses track, manage, and organize their products
+                        and stock levels. It allows users to monitor quantities, update items, and ensure efficient
+                        control of inventory..</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Kerin0011/Inventory" target="_blank">View Code</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contacto">
+            <h2>Contact Me!</h2>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/kerin-barranco-793261324/" target="_blank" class="social-btn">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/Kerin0011" target="_blank" class="social-btn">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+            </div>
+
+            <div class="contact-box">
+                <h3>Send me a message</h3>
+                <form action="https://formspree.io/f/xyklopyo" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Contact Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">How can I help you?</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or inquiry..." required></textarea>
+                    </div>
+                    <!-- Input oculto para evitar spam (Formspree Honeypot) -->
+                    <input type="text" name="_gotcha" style="display:none">
+                    <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    <p id="form-status" style="display: none; text-align: center; margin-top: 15px; font-weight: 600; padding: 10px; border-radius: 8px;"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Kerin Barranco Martinez - All rights reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
